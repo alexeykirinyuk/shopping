@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/alexeykirinyuk/shopping/grpc_products";
+option go_package = "github.com/alexeykirinyuk/shopping/grpc_libs";
 
 package api;
 
