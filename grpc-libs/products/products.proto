@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+option go_package = "github.com/alexeykirinyuk/shopping/grpc_products";
+
+package api;
+
+// Product Service definition
+service ProductService {
+    // Create new product
+    rpc Create (Product) returns (ID) {}
+
+    // Get product by ID
+    rpc Get (ID) returns (Product) {}
+
+    // Update product
+    rpc Update (Product) returns (Empty) {}
+
+    // Delete product
+    rpc Delete (ID) returns (Empty) {}
+}
+
+
+message Product {
+	string ID = 1;
+	string Name = 2;
+	string Title = 3;
+	string Description = 4;
+	float Price = 5;
+	string Currency = 6;
+}
+
+message ID {
+    string ID = 1;
+}
+
+message Empty {
+}
